@@ -1,7 +1,23 @@
 create table users (
     id int unsigned auto_increment primary key,
-    name varchar(50),
-    email varchar(50),
+    full_name varchar(255),
+    mobile varchar(255),
     password varchar(50),
+    location_id int,
+    gender varchar(50),
     is_admin boolean default false
+);
+
+create table locations (
+    id int unsigned auto_increment primary key,
+    name varchar(255),
+    tags text
+);
+
+create table transactions (
+    id int unsigned auto_increment primary key,
+    user_id int,
+    date varchar(10),
+    timestamp timestamp default current_timestamp,
+    nominal int
 );

@@ -1,0 +1,58 @@
+Admin:
+    - Login
+        - user_id
+        - password
+    - Location list [OK]
+        - location name
+    - Search location [OK]
+    - Location detail
+    - Jukir list
+    - Register Jukir
+        - full name
+        - mobile
+        - location
+        - barcode
+    - List dompet jukir
+        - name
+        - user id
+        - location
+    - Dompet detail
+        - name
+        - user id
+        - perhari
+        - perminggu
+        - perbulan
+        - pertahun
+    - Admin profile
+        - name
+        - user_id
+        - jenis kelamin
+
+Jukir:
+    - Login
+        - user id
+        - password
+    - Home page
+        - name
+        - location
+    - Barcode
+        - base64
+    - Dompet detail
+        - name
+        - user id
+        - perhari
+        - perminggu
+        - perbulan
+        - pertahun
+    - Admin profile
+        - name
+        - user_id
+        - jenis kelamin
+        - lokasi bekerja
+
+
+TABLES:
+- User
+    - Full Name
+    - Location
+    - Jenis Kelamin

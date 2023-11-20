@@ -1,18 +1,38 @@
+### Register
 POST http://localhost:3000/auth/register
 Content-Type: application/json
 
 {
-    "name": "naura",
-    "email": "naura@mail.com",
-    "password": "naura123"
+    "full_name": "halimah",
+    "mobile": "082108210821",
+    "location_id": 1,
+    "gender": "Perempuan",
+    "password": "halimah123",
+    "is_admin": false
 }
 
-###
+### Login
 POST http://localhost:3000/auth/login
 Content-Type: application/json
 
 {
-    "email": "naura@mail.com",
-    "password": "naura123"
+    "user_id": "000004",
+    "password": "halimah123"
 }
 
+### Authenticated
+GET http://localhost:3000/auth/whoami
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjAwMDAwNCIsImZ1bGxfbmFtZSI6ImhhbGltYWgiLCJtb2JpbGUiOiIwODIxMDgyMTA4MjEiLCJwYXNzd29yZCI6ImhhbGltYWgxMjMiLCJsb2NhdGlvbl9pZCI6MSwiZ2VuZGVyIjoiUGVyZW1wdWFuIiwiaXNfYWRtaW4iOjAsImlhdCI6MTcwMDQ2MDU1OX0.hyXQWorpWY9WEktknu8XzQTSvkXVncA9pH36iEW5mXE
+
+
+### create locations
+POST http://localhost:3000/locations
+Content-Type: application/json
+
+{
+    "name": "cetroo",
+    "tags": ["meneer","batam center","poltek","global","mcd"]
+}
+
+### show Locations
+GET http://localhost:3000/locations?search=meneer
